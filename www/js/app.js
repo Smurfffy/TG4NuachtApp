@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var TG4NuachtApp = angular.module('starter', ['ionic'])
+var TG4NuachtApp = angular.module('starter', ['ionic', 'ngCordova'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -42,4 +42,4 @@ TG4NuachtApp.controller("FeedController", function($http, $scope) {
         window.open(v, "_system", "location=yes");
     }
  
-});           
+});      
