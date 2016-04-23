@@ -16,7 +16,6 @@
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
-    <script src="js/ng-cordova.min.js"></script>
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
@@ -34,12 +33,8 @@
       <a class="button icon ion-social-facebook button-positive" href="#" onclick="window.open('https://www.facebook.com/TG4TV', '_system', 'location=yes'); return false;"></a>
         <a class="button icon ion-social-twitter button-calm" href="#" onclick="window.open('https://twitter.com/TG4TV?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor', '_system', 'location=yes'); return false;"></a>
       </div>
-        <label class="item item-input">
-        <i class="icon ion-search placeholder-icon"></i>
-        <input type="search" placeholder="search" ng-model="searchQuery"/>
-      </label>
-
-      <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()"></ion-refresher> 
+      <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()">
+      </ion-refresher> 
           <div class="card">
               <a ng-repeat="entry in entries" class="item item-text-wrap"  ng-click="browse(entry.link)" | filter:searchQuery>
                   <b><u>{{entry.title}}</u></b><br>
